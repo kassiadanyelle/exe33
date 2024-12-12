@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubra os destinos culturais mais fascinantes do Brasil!">
+    <meta name="author" content="Seu Nome">
+    <title>Destinos Culturais do Brasil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+*
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f3f3f3;
+        }
+
+        #cidades {
+            padding: 60px 20px;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #fff;
+            text-align: center;
+        }
+
+        #cidades h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        #cidades p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+           
+        }
+
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .city-card {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+        }
+
+        .city-card:before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+
+        .city-card:hover:before {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+        }
+
+        .city-title {
+            position: relative;
+            z-index: 2;
+        }
+
+        
+        #mapa-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            #cidades h2 {
+                font-size: 2.5rem;
+            }
+            #cidades p {
+                font-size: 1rem;
+            }
+            .city-card {
+                font-size: 1rem;
+            }
+        }
+        @charset "UTF-8";
+
+body {
+    background-image: url("imagens/Cidade_Maravilhosa.jpg");
+    background-position: left bottom;
+}
+
+.container-botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; 
+}
+
+.btn-voltar {
+  display: inline-block;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-voltar:hover {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  transform: scale(1.05);
+}
+
+.btn-voltar:active {
+  transform: scale(0.95);
+}
+    </style>
+</head>
+<body>
+
+    <section id="cidades">
+        <div class="cidades-container">
+            <h2>🌎 Destinos Culturais</h2>
+            <p>
+                Explore a riqueza cultural do Brasil! Descubra cidades fascinantes que oferecem experiências únicas 
+                repletas de tradição e beleza. Clique para explorar!
+            </p>
+
+            
+            <div class="city-grid">
+                <a href="https://www.marriott.com/en-us/hotels/saowh-w-sao-paulo/overview/?cid=PAI_GLB00062A7_GLE000E9QM_GLF000WU7U&gad_source=1&gclid=Cj0KCQiA3sq6BhD2ARIsAJ8MRwXXIurXEVG_RbaUociEs2-RhsF3LLi3-qW_FoTjBFtTFqz7ZVp0vagaAhcEEALw_wcB&gclsrc=aw.ds" target="mapa" class="city-card">
+                    <span class="city-title">São Paulo</span>
+                </a>
+                <a href="https://www.smartriotour.com.br/?https%3A%2F%2Fsmartriotour_com_br%2F&gad_source=1&gclid=Cj0KCQiA3sq6BhD2ARIsAJ8MRwUgn1WZ7Mz52s3tyN8AxX4I3paeWpLzj7GPL0k03WHwOaMsesa0dwYaAjlhEALw_wcB" target="mapa" class="city-card">
+                    <span class="city-title">Rio de Janeiro</span>
+                </a>
+                <a href="https://www.tripadvisor.com.br/Attractions-g303322-Activities-Brasilia_Federal_District.html" target="mapa" class="city-card">
+                    <span class="city-title">Brasília</span>
+                </a>
+                <a href="https://www.tripadvisor.com.br/Attractions-g303272-Activities-Salvador_State_of_Bahia.html" target="mapa" class="city-card">
+                    <span class="city-title">Salvador</span>
+                </a>
+                <a href="https://www.tripadvisor.com.br/Attractions-g303235-Activities-Manaus_Amazon_River_State_of_Amazonas.html" target="mapa" class="city-card">
+                    <span class="city-title">Manaus</span>
+                </a>
+                <a href="https://www.tripadvisor.com.br/Attractions-g303404-Activities-Belem_State_of_Para.html" target="mapa" class="city-card">
+                    <span class="city-title">Belém</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="mapa-container">
+        <iframe id="mapa" name="mapa" src="https://www.google.com/maps?q=S%C3%A3o+Paulo" title="Mapa de Destino"></iframe>
+    </div>
+    <div class="container-botao">
+        <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+      </div>
+</body>
+</html>

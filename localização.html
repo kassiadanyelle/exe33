@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Adicione sua localização destinada e entre em contato!">
+  <title>Localização - Revisão de Viagem</title>
+<style>
+    /* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #00c6ff, #0072ff);
+  color: #fff;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #fff;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-section {
+  background: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #0072ff;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.map-container {
+  margin-top: 1rem;
+}
+
+iframe {
+  border: 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-top: 2px solid #fff;
+}
+
+.container-botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; 
+}
+
+.btn-voltar {
+  display: inline-block;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-voltar:hover {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  transform: scale(1.05);
+}
+
+.btn-voltar:active {
+  transform: scale(0.95);
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Revisão de Viagem</h1>
+    <p>Adicione sua localização destinada e nos conte sobre sua próxima aventura!</p>
+  </header>
+  <main>
+    <section class="form-section">
+      <h2>Entre em contato</h2>
+      <form action="submit.php" method="POST">
+        <div class="form-group">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="localizacao">Localização Destinada:</label>
+          <input type="text" id="localizacao" name="localizacao" placeholder="Insira o endereço ou destino" required>
+        </div>
+        <div class="map-container">
+          <label for="map">Mapa Interativo:</label>
+          <iframe 
+            id="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093796!2d144.95373531590473!3d-37.81627974204154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sVictoria%20Market!5e0!3m2!1sen!2sau!4v1692193190978!5m2!1sen!2sau" 
+            width="100%" 
+            height="300" 
+            style="border: 0; border-radius: 10px;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <div class="container-botao">
+    <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+  </div>
+  <footer>
+    <p>&copy; 2024 Revisão de Viagem. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

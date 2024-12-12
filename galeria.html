@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Cidades</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #8bdcfc;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .gallery {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .container-botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; 
+}
+
+.btn-voltar {
+  display: inline-block;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-voltar:hover {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  transform: scale(1.05);
+}
+
+.btn-voltar:active {
+  transform: scale(0.95);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galeria de Cidades</h1>
+    </header>
+
+    <section class="gallery">
+        <h2>Explore as Belezas do Brasil</h2>
+        <div class="gallery-container">
+     
+            <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303506-Rio_de_Janeiro_State_of_Rio_de_Janeiro-Vacations.html" target="_blank">
+                    <img src="imagens/Rio de Janeiro.jpg" alt="Rio de Janeiro">
+                    <div class="overlay">Rio de Janeiro</div>
+                </a>
+            </div>
+          
+            <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303631-Sao_Paulo_State_of_Sao_Paulo-Vacations.html" target="_blank">
+                    <img src="imagens/Sao-Paulo-860x574.jpg" alt="São Paulo">
+                    <div class="overlay">São Paulo</div>
+                </a>
+            </div>
+           
+            <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303272-Salvador_State_of_Bahia-Vacations.html" target="_blank">
+                    <img src="imagens/Salvador.webp" alt="Salvador">
+                    <div class="overlay">Salvador</div>
+                </a>
+            </div>
+           
+            <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303322-Brasilia_Federal_District-Vacations.html" target="_blank">
+                    <img src="imagens/Brasília.jpg" alt="Brasília">
+                    <div class="overlay">Brasília</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303374-Belo_Horizonte_State_of_Minas_Gerais-Vacations.html" target="_blank">
+                    <img src="imagens/Belo Horizonte.jpg" alt="Belo Horizonte">
+                    <div class="overlay">Belo Horizonte</div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303293-Fortaleza_State_of_Ceara-Vacations.html" target="_blank">
+                    <img src="imagens/Fortaleza.jpg" alt="Fortaleza">
+                    <div class="overlay">Fortaleza</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303605-Campinas_State_of_Sao_Paulo-Vacations.html" target="_blank">
+                    <img src="imagens/Campinas.jpg" alt="Campinas">
+                    <div class="overlay">Campinas</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303235-Manaus_Amazon_River_State_of_Amazonas-Vacations.html" target="_blank">
+                    <img src="imagens/Manaus.jpg" alt="Manaus">
+                    <div class="overlay">Manaus</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303530-State_of_Rio_Grande_do_Sul-Vacations.html" target="_blank">
+                    <img src="imagens/Rio Grande.jpg" alt="Rio Grande">
+                    <div class="overlay">Rio Grande</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303404-Belem_State_of_Para-Vacations.html" target="_blank">
+                    <img src="imagens/Belem.jpg" alt="Belém">
+                    <div class="overlay">Belém</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g673267-Sao_Luis_State_of_Maranhao-Vacations.html" target="_blank">
+                    <img src="imagens/São Luís.webp" alt="São Luís">
+                    <div class="overlay">São Luís</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g309293-San_Jose_San_Jose_Metro_Province_of_San_Jose-Vacations.html" target="_blank">
+                    <img src="imagens/São José.jpg" alt="São José">
+                    <div class="overlay">São José</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303324-Goiania_State_of_Goias-Vacations.html" target="_blank">
+                    <img src="imagens/Goiânia.jpg" alt="Goiania">
+                    <div class="overlay">Goiania</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g668997-Palmas_State_of_Tocantins-Vacations.html" target="_blank">
+                    <img src="imagens/Palmas.jpg" alt="Palmas">
+                    <div class="overlay">Palmas</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g658210-Maringa_State_of_Parana-Vacations.html" target="_blank">
+                    <img src="imagens/Maringá.jpg" alt="Maringá
+                    ">
+                    <div class="overlay">Maringá</div>
+                </a>
+            </div> <div class="gallery-item">
+                <a href="https://www.tripadvisor.com.br/Tourism-g303616-Jundiai_State_of_Sao_Paulo-Vacations.html" target="_blank">
+                    <img src="imagens/Jundiaí.jpg" alt="Jundiaí">
+                    <div class="overlay">Jundiaí</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="container-botao">
+        <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+      </div>
+    <footer>
+        <p>&copy; 2024 Meu Brasil. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
